@@ -1,10 +1,10 @@
 package cn.yueshutong.server.remote.parm.entity;
 
-import com.sun.jndi.toolkit.url.Uri;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.net.MalformedURLException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * Create by yster@foxmail.com 2018/12/31 0031 12:48
@@ -21,8 +21,8 @@ public class Address implements Serializable {
     public String getName() {
         if (this.name==null||this.name.trim().isEmpty()){
             try {
-                this.name=new Uri(this.address).getHost();
-            } catch (MalformedURLException e) {
+                this.name= InetAddress.getByName(this.address).getHostName();
+            } catch ( UnknownHostException e) {
                 this.name = this.address;
                 e.printStackTrace();
             }
