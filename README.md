@@ -128,9 +128,3 @@ spring.jpa.hibernate.ddl-auto=update
 **JavaMonitorPlus监控架构图**
 
 ![./JavaMonitor/picture/20190317192605.png](./JavaMonitor/picture/20190317192605.png)
-
-## 九、About
-
-Email：[yster@foxmail.com](mailto:yster@foxmail.com)
-
-<img src='https://i.loli.net/2020/01/13/pPoFNwT6fKCZQ2i.png' width="400px" />
